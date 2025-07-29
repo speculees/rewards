@@ -6,7 +6,8 @@ const meta: Meta<unknown> = {
   title: 'Product/Input',
   component: InputComponent,
   args: {
-    label: 'Button'
+    label: 'Button',
+    disabled: false,
   }
 };
 
@@ -23,10 +24,11 @@ export const Default: StoryObj<InputComponent> = {
     template: `
       <rui-input>
         <input
-        (focus)="onFocus($event)"
-        (blur)="onBlur($event)"
-        (input)="onChange($event.target.value)"
-        placeholder="Input Placeholder" type="text" />
+          [disabled]="args.disabled"
+          (focus)="onFocus($event)"
+          (blur)="onBlur($event)"
+          (input)="onChange($event.target.value)"
+          placeholder="Input Placeholder" type="text" />
       </rui-input>
     `,
   }),
