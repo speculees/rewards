@@ -1,0 +1,47 @@
+.rui-slider {
+    display: inline-block;
+    width: 20%;
+    padding: var(--global-spacing-sm);
+    border-radius: var(--global-radius-md);
+
+    &--focused {
+        outline: 1px solid var(--light-color-primary);
+    }
+
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    input[type='range'] {
+        width: 100%;
+        appearance: none;
+        height: 4px;
+        border-radius: 2px;
+        background: var(--light-color-border);
+        outline: none;
+        transition: background 0.3s;
+
+        &:focus {
+            background: var(--light-color-primary);
+        }
+
+        &::-webkit-slider-thumb {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--light-color-primary);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        &::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--light-color-primary);
+            cursor: pointer;
+        }
+    }
+}
