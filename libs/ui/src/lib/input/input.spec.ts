@@ -29,7 +29,7 @@ describe('Input', () => {
 
     it('should set disabled', async () => {
       component.disabled = true;
-      const ruiInput = await loader.getHarness(InputHarness);
+      const ruiInput = await loader.getHarness(InputHarness.with({ disabledInput: true }));
       expect(await ruiInput.isDisabled()).toBe(true);
     });
 

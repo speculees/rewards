@@ -1,7 +1,7 @@
 import { BaseHarnessFilters, ComponentHarness, HarnessPredicate } from '@angular/cdk/testing';
 
 type RuiInputHarnessFilter = BaseHarnessFilters & {
-  disabled: boolean
+  disabledInput: boolean
 };
 
 export default class InputHarness extends ComponentHarness {
@@ -11,10 +11,10 @@ export default class InputHarness extends ComponentHarness {
     return new HarnessPredicate(InputHarness, options)
       .addOption(
         'input disabled',
-        options.disabled,
+        options.disabledInput,
         (harness) => harness
           .isInputDisabled()
-          .then((value) => value === options.disabled)
+          .then((value) => value === options.disabledInput)
       );
   }
 
@@ -23,8 +23,7 @@ export default class InputHarness extends ComponentHarness {
   isInputDisabled() {
     return this
       .input()
-      .then((input) => input.getAttribute('disabled'))
-      .then((value) => value === 'true');
+      .then((input) => input.getProperty<boolean>('disabled'))
   }
 
   isDisabled() {
