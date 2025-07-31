@@ -1,6 +1,13 @@
-import { AfterViewChecked, AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import {
+  AfterViewChecked,
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  Input,
+  ViewChild,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import QRCode from 'qrcode';
+import * as QRCode from 'qrcode';
 
 @Component({
   selector: 'rui-qrcode',
@@ -10,7 +17,7 @@ import QRCode from 'qrcode';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Qrcode implements AfterViewChecked {
+export class QrcodeComponent implements AfterViewChecked {
   @Input() value = '';
 
   @ViewChild('canvas', { static: true }) canvas!: ElementRef<HTMLCanvasElement>;
@@ -18,6 +25,6 @@ export class Qrcode implements AfterViewChecked {
   ngAfterViewChecked() {
     QRCode.toCanvas(this.canvas.nativeElement, this.value, function (error) {
       if (error) console.error(error);
-    })
+    });
   }
 }
