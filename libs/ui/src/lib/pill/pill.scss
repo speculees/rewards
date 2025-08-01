@@ -1,0 +1,22 @@
+@mixin pill-colors($bg, $fg) {
+  background-color: $bg;
+  color: $fg;
+}
+
+.rui-pill {
+  display: inline-block;
+  padding: var(--global-spacing-sm) var(--global-spacing-md);
+  font-size: var(--global-font-size-base);
+  border-radius: var(--global-radius-md);
+  cursor: pointer;
+  background-color: var(--light-color-primary);
+  color: var(--dark-color-text);
+
+  &--success {
+    @include pill-colors(#28a745, white);
+  }
+
+  &--error {
+    @include pill-colors(#e01f1f, white);
+  }
+}
