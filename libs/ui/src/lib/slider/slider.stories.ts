@@ -1,10 +1,16 @@
-import { Meta, StoryObj } from '@storybook/angular';
+import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { action } from 'storybook/actions';
 import { SliderComponent } from './slider';
+import { SliderModule } from './module';
 
 const meta: Meta<SliderComponent> = {
   title: 'Product/Slider',
   component: SliderComponent,
+  decorators: [
+    moduleMetadata({
+      imports: [SliderModule],
+    })
+  ],
   argTypes: {
     min: { control: 'number' },
     max: { control: 'number' },
@@ -15,7 +21,7 @@ const meta: Meta<SliderComponent> = {
   args: {
     min: 0,
     max: 100,
-    step: 1,
+    step: 0,
     value: 50,
     disabled: false,
   }
@@ -25,34 +31,19 @@ const meta: Meta<SliderComponent> = {
 export default meta;
 
 export const Default: StoryObj<SliderComponent> = {
-  args: {
-    disabled: false, 
-  },
   render: (args) => ({
     props: {
-      ...args,
+      args,
       onInput: action('slider input'),
     },
     template: `
-<rui-slider
-  [min]="0"
-  [max]="50"
-  [step]="5"
-  [value]="amount"
-  [disabled]="false"
->
-  <input
-    type="range"
-    [min]="min"
-    [max]="max"
-    [step]="step"
-    [value]="value"
-    [disabled]="disabled"
-    (input)="onInput($event)"
-    (change)="onChange($event)"
-  />
-</rui-slider>
-
+      <rui-slider
+        [min]="args.min"
+        [max]="args.max"
+        [step]="args.step"
+        [disabled]="args.disabled">
+        <input ruiSliderThumb value="20" />
+      </rui-slider>
     `,
   }),
 };

@@ -1,47 +1,162 @@
+$slider-inactive-track-height: 2px !default;
+$slider-active-track-height: 4px !default;
+$slider-active-track-shape: 0px !default;
+$slider-active-track-color: var(--global-color-primary) !default;
+$slider-disabled-active-track-color: var(--global-color-gray-100) !default;
+
+$slider-horizontal-margin: 16px !default;
+$slider-min-size: 250px !default;
+
+$slider-handle-width: 16px !default;
+$slider-handle-height: 16px !default;
+$slider-handle-shape: 50% !default;
+$slider-handle-color: var(--global-color-primary) !default;
+$slider-hover-handle-color: var(--global-color-primary) !default;
+$slider-focus-handle-color: var(--global-color-primary) !default;
+$slider-disabled-handle-color: var(--global-color-gray-100) !default;
+$slider-with-overlap-handle-outline-color: var(--global-color-primary) !default;
+$slider-with-overlap-handle-outline-width: 1px !default;
+$slider-handle-elevation: 0px 2px 2px 0px rgba(0, 0, 0, 0.2), 0px 3px 1px -2px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12) !default;
+
+.rui-slider__track {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  pointer-events: none;
+  height: $slider-inactive-track-height;
+}
+
+.rui-slider__track--active,
+.rui-slider__track--inactive {
+  display: flex;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.rui-slider__track--active {
+  overflow: hidden;
+  border-radius: $slider-active-track-shape;
+
+  $active-height-ref: 2px;
+  $inactive-height-ref: 1px;
+  height: $active-height-ref;
+  top: calc((#{$inactive-height-ref} - #{$active-height-ref}) / 2);
+}
+
+.rui-slider__track--active_fill {
+  border-top-style: solid;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-origin: left;
+  transition: transform 80ms ease;
+
+  border-color: $slider-active-track-color;
+  border-top-width: $slider-active-track-height;
+
+  .rui-slider--disabled & {
+    border-color: $slider-disabled-active-track-color;
+  }
+
+  [dir='rtl'] & {
+    -webkit-transform-origin: right;
+    transform-origin: right;
+  }
+}
+
+.rui-slider__input {
+  cursor: pointer;
+  left: 2px;
+  margin: 0;
+  height: 44px;
+  opacity: 0;
+  position: absolute;
+  top: 2px;
+  width: 44px;
+
+  // It's common for apps to globally set `box-sizing: border-box` which messes up our
+  // measurements. Explicitly set `content-box` to avoid issues.
+  box-sizing: content-box;
+}
+
+.rui-slider__thumb {
+  display: flex;
+  left: -24px;
+  outline: none;
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  pointer-events: none;
+}
+
+.rui-slider__thumb-knob {
+  position: absolute;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+
+  $width-ref: $slider-handle-width;
+  $height-ref: $slider-handle-height;
+  width: $width-ref;
+  height: $height-ref;
+  border-width: calc(#{$height-ref} / 2) calc(#{$width-ref} / 2);
+
+  box-shadow: $slider-handle-elevation;
+  background-color: $slider-handle-color;
+  border-color: $slider-handle-color;
+  border-radius: $slider-handle-shape;
+
+  .rui-slider__thumb:hover & {
+    background-color: $slider-hover-handle-color;
+    border-color: $slider-hover-handle-color;
+  }
+
+  .rui-slider__thumb--focused & {
+    background-color: $slider-focus-handle-color;
+    border-color: $slider-focus-handle-color;
+  }
+
+  .rui-slider--disabled & {
+    background-color: $slider-disabled-handle-color;
+    border-color: $slider-disabled-handle-color;
+  }
+
+  .rui-slider__thumb--top &,
+  .rui-slider__thumb--top.rui-slider__thumb:hover &,
+  .rui-slider__thumb--top.rui-slider__thumb--focused & {
+    border: solid 1px #fff;
+    box-sizing: content-box;
+    border-color: $slider-with-overlap-handle-outline-color;
+    border-width: $slider-with-overlap-handle-outline-width;
+  }
+}
+
 .rui-slider {
-    display: inline-block;
-    width: 20%;
-    padding: var(--global-spacing-sm);
-    border-radius: var(--global-radius-md);
+  display: inline-block;
+  box-sizing: border-box;
+  outline: none;
+  vertical-align: middle;
+  cursor: pointer;
+  height: 48px;
+  margin: 0 $slider-horizontal-margin;
+  position: relative;
+  touch-action: pan-y;
 
-    &--focused {
-        outline: 1px solid var(--light-color-primary);
+  width: auto;
+  min-width: $slider-min-size - (2 * $slider-horizontal-margin);
+  -webkit-tap-highlight-color: transparent;
+
+  &.rui-slider--disabled {
+    cursor: auto;
+    opacity: 0.38;
+
+    .rui-slider__input {
+      cursor: auto;
     }
-
-    &--disabled {
-        opacity: 0.5;
-        pointer-events: none;
-    }
-
-    input[type='range'] {
-        width: 100%;
-        appearance: none;
-        height: 4px;
-        border-radius: 2px;
-        background: var(--light-color-border);
-        outline: none;
-        transition: background 0.3s;
-
-        &:focus {
-            background: var(--light-color-primary);
-        }
-
-        &::-webkit-slider-thumb {
-            appearance: none;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: var(--light-color-primary);
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        &::-moz-range-thumb {
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: var(--light-color-primary);
-            cursor: pointer;
-        }
-    }
+  }
 }
