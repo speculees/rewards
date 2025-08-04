@@ -96,6 +96,9 @@ importers:
       '@schematics/angular':
         specifier: ~20.1.0
         version: 20.1.1(chokidar@4.0.3)
+      '@storybook/addon-a11y':
+        specifier: ^9.1.1
+        version: 9.1.1(storybook@9.0.17(@testing-library/dom@10.4.0)(prettier@2.8.8))
       '@storybook/angular':
         specifier: 9.0.17
         version: 9.0.17(a0f5791fed9abf94d322be94dde09fe0)
@@ -2795,6 +2798,11 @@ packages:
   '@sinonjs/fake-timers@13.0.5':
     resolution: {integrity: sha512-36/hTbH2uaWuGVERyC6da9YwGWnzUZXuPro/F2LfsdOsLnCojz/iSH8MxUt/FD2S5XBSVPhmArFUXcpCQ2Hkiw==}
 
+  '@storybook/addon-a11y@9.1.1':
+    resolution: {integrity: sha512-ZCKxYQmHnisAdpjYeRRD41NfA5UlTFpej0xgGLiAc9PGz264RRP5B+pZUHHNIyEKA9JCDcyc4BPe+xnXZgDjSA==}
+    peerDependencies:
+      storybook: ^9.1.1
+
   '@storybook/angular@9.0.17':
     resolution: {integrity: sha512-35JDkRT21DXSIJ48K8RB9SEHedafH4YAlOfl42JsBgOVGTc7Gq59JBTrEQS39PYm1gikR6ComuOCgzVekhZuag==}
     engines: {node: '>=20.0.0'}
@@ -3591,6 +3599,10 @@ packages:
 
   aws4@1.13.2:
     resolution: {integrity: sha512-lHe62zvbTB5eEABUVi/AwVh0ZKY9rMMDhmm+eeyuuUQbQ3+J+fONVQOZyj+DdrvD4BY33uYniyRJ4UJIaSKAfw==}
+
+  axe-core@4.10.3:
+    resolution: {integrity: sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==}
+    engines: {node: '>=4'}
 
   axios@1.11.0:
     resolution: {integrity: sha512-1Lx3WLFQWm3ooKDYZD1eXmoGO9fxYQjrycfHFC8P0sCfQVXyROp0p9PFWBehewBOdCwHc+f/b8I0fMto5eSfwA==}
@@ -12373,6 +12385,12 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.1
 
+  '@storybook/addon-a11y@9.1.1(storybook@9.0.17(@testing-library/dom@10.4.0)(prettier@2.8.8))':
+    dependencies:
+      '@storybook/global': 5.0.0
+      axe-core: 4.10.3
+      storybook: 9.0.17(@testing-library/dom@10.4.0)(prettier@2.8.8)
+
   '@storybook/angular@9.0.17(a0f5791fed9abf94d322be94dde09fe0)':
     dependencies:
       '@angular-devkit/architect': 0.2001.1(chokidar@4.0.3)
@@ -13244,6 +13262,8 @@ snapshots:
   aws-sign2@0.7.0: {}
 
   aws4@1.13.2: {}
+
+  axe-core@4.10.3: {}
 
   axios@1.11.0:
     dependencies:

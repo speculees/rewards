@@ -6,6 +6,9 @@ const config: StorybookConfig = {
     name: '@storybook/angular',
     options: {},
   },
+  addons: [
+    '@storybook/addon-a11y',
+  ]
 };
 
 export default config;

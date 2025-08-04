@@ -36,6 +36,7 @@
     "@nx/web": "21.3.1",
     "@nx/workspace": "21.3.1",
     "@schematics/angular": "~20.1.0",
+    "@storybook/addon-a11y": "^9.1.1",
     "@storybook/angular": "9.0.17",
     "@swc-node/register": "~1.9.1",
     "@swc/core": "~1.5.7",
