@@ -1,101 +1,159 @@
-# RewardsDs
+# Nx Monorepo – Rewards DS
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+This repository is an **Nx monorepo** managed with [`pnpm`](https://pnpm.io/), containing:
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
+- **`apps/rewards-ds`** – A demo Angular application.
+- **`libs/ui`** – A shared UI component library with Storybook and design tokens.
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+---
 
-## Run tasks
+## 📦 Prerequisites
 
-To run the dev server for your app, use:
+- [Node.js](https://nodejs.org/) (version per `.nvmrc` or `package.json` engines)
+- [pnpm](https://pnpm.io/) – Installed globally:
 
-```sh
-npx nx serve rewards-ds
-```
+  ```sh
+  npm install -g pnpm
+  ```
 
-To create a production bundle:
+- **VS Code** users: install the [Nx Console](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console) extension for an interactive UI to run commands.
 
-```sh
-npx nx build rewards-ds
-```
+---
 
-To see all available targets to run for a project, run:
+## 🚀 Getting Started
 
-```sh
-npx nx show project rewards-ds
-```
-
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
-
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Add new projects
-
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-Use the plugin's generator to create new projects.
-
-To generate a new application, use:
+Install dependencies:
 
 ```sh
-npx nx g @nx/angular:app demo
+pnpm install
 ```
 
-To generate a new library, use:
+---
+
+## 🏗 Project Structure
+
+```txt
+apps/
+  rewards-ds/       # Angular demo app
+libs/
+  ui/               # UI component library (Angular + Storybook)
+```
+
+---
+
+## 📜 Useful Nx CLI Commands
+
+You can run any target with:
 
 ```sh
-npx nx g @nx/angular:lib mylib
+pnpm nx <target> <project> [options]
 ```
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+### Apps
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Set up CI!
-
-### Step 1
-
-To connect to Nx Cloud, run the following command:
+#### Serve the demo app
 
 ```sh
-npx nx connect
+pnpm nx serve rewards-ds
 ```
 
-Connecting to Nx Cloud ensures a [fast and scalable CI](https://nx.dev/ci/intro/why-nx-cloud?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) pipeline. It includes features such as:
+Runs the app in development mode on [http://localhost:4200](http://localhost:4200).
 
-- [Remote caching](https://nx.dev/ci/features/remote-cache?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task distribution across multiple machines](https://nx.dev/ci/features/distribute-task-execution?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Automated e2e test splitting](https://nx.dev/ci/features/split-e2e-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task flakiness detection and rerunning](https://nx.dev/ci/features/flaky-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-### Step 2
-
-Use the following command to configure a CI workflow for your workspace:
+#### Build the demo app
 
 ```sh
-npx nx g ci-workflow
+pnpm nx build rewards-ds
 ```
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+#### Run tests for the demo app
 
-## Install Nx Console
+```sh
+pnpm nx test rewards-ds
+```
 
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
+---
 
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+### UI Library
 
-## Useful links
+#### Build tokens
 
-Learn more:
+```sh
+pnpm nx build-tokens ui
+```
 
-- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+Generates design tokens via [Style Dictionary](https://amzn.github.io/style-dictionary/).
 
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+#### Build the library
+
+```sh
+pnpm nx build ui
+```
+
+#### Run Storybook
+
+```sh
+pnpm nx storybook ui
+```
+
+Starts Storybook at [http://localhost:4400](http://localhost:4400).
+
+#### Build static Storybook
+
+```sh
+pnpm nx build-storybook ui
+```
+
+#### Run tests for UI library
+
+```sh
+pnpm nx test ui
+```
+
+---
+
+## ⚡ Recommended Workflow for running the demo app
+
+1. **Develop components in `libs/ui`** with Rewards DS demo app.
+
+   ```sh
+   pnpm nx link-ui rewards-ds
+   ```
+
+    The app will use styles and components from the UI library. These components are pre-compiled. The link command will also link the UI library into the demo app dependencies. See root node_modules folder.
+
+2. Serve the app:
+
+   ```sh
+   pnpm nx serve rewards-ds
+   ```
+
+---
+
+## ⚡ Recommended Workflow for running the storybook UI library
+
+1. **Develop components in `libs/ui`** with Storybook.
+
+   ```sh
+   pnpm nx storybook ui 
+   ```
+
+  The app will use styles and components from the UI library.
+  The components will be compiled with Storybook.
+
+## 🛠 Tips
+
+- Use **Nx Console** in VS Code for a friendly GUI to run tasks without remembering CLI syntax.
+- Use `--configuration=production` or `--configuration=development` for explicit build modes.
+- You can run multiple targets in parallel:
+
+  ```sh
+  pnpm nx run-many --target=build --projects=ui,rewards-ds
+  ```
+
+---
+
+## 📚 Nx Documentation
+
+- [Nx.dev – Core Concepts](https://nx.dev/getting-started/intro)
+- [Nx Angular Plugin](https://nx.dev/angular)
+- [Storybook](https://storybook.js.org/docs/angular/get-started/introduction)
