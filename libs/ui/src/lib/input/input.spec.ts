@@ -3,7 +3,7 @@ import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { InputComponent } from './input';
-import InputHarness from './input-harness';
+import InputHarness from '../../../testing/lib/input-harness';
 
 describe('Input', () => {
   let component: TestComponent;

@@ -1,0 +1,2 @@
+overrides:
+  '@rewards-ds/ui': link:../../../Library/pnpm/global/5/node_modules/@rewards-ds/ui
