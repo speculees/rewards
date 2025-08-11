@@ -1,0 +1,168 @@
+{
+  "Colours": {
+    "buttons": {
+      "primary": {
+        "default": {
+          "value": "{Colour.Primary purple}",
+          "type": "color"
+        },
+        "hover-pressed": {
+          "value": "{Colour.Darkest purple}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{Colour.Inactive grey}",
+          "type": "color"
+        },
+        "white": {
+          "value": "{Colour.White}",
+          "type": "color"
+        },
+        "text": {
+          "disabled": {
+            "value": "{Colour.Mid grey}",
+            "type": "color"
+          },
+          "active": {
+            "value": "{Colour.White}",
+            "type": "color"
+          }
+        }
+      },
+      "secondary": {
+        "secondary": {
+          "value": "{Colour.Transparent}",
+          "type": "color"
+        },
+        "text": {
+          "disabled": {
+            "value": "{Colour.White}",
+            "type": "color"
+          },
+          "active": {
+            "value": "{Colour.Dark grey}",
+            "type": "color"
+          }
+        }
+      }
+    },
+    "icons": {
+      "active": {
+        "value": "{Colour.Gray.Sand.25}",
+        "type": "color"
+      },
+      "disabled": {
+        "value": "{Colour.Mid grey}",
+        "type": "color"
+      },
+      "icon button": {
+        "value": "{Colour.Primary purple}",
+        "type": "color"
+      }
+    },
+    "background": {
+      "background 1": {
+        "value": "{Colour.White}",
+        "type": "color"
+      },
+      "background 2": {
+        "value": "{Colour.Lightest purple}",
+        "type": "color"
+      },
+      "background 3": {
+        "value": "{Colour.Light purple}",
+        "type": "color"
+      },
+      "background 4": {
+        "value": "{Colour.Dark Purple}",
+        "type": "color"
+      },
+      "background 5": {
+        "value": "{Colour.Light blue}",
+        "type": "color"
+      },
+      "background 6": {
+        "value": "{Colour.Pink}",
+        "type": "color"
+      }
+    },
+    "Utility": {
+      "Black": {
+        "value": "{Colour.Black}",
+        "type": "color"
+      },
+      "Transparent": {
+        "value": "{Colour.Transparent}",
+        "type": "color"
+      },
+      "White": {
+        "value": "{Colour.White}",
+        "type": "color"
+      }
+    },
+    "Body 1": {
+      "value": "{Colour.Dark grey}",
+      "type": "color"
+    },
+    "Heading 1": {
+      "value": "{Colour.Darkest purple}",
+      "type": "color"
+    },
+    "Heading 2": {
+      "value": "{Colour.Dark grey}",
+      "type": "color"
+    },
+    "Illustration": {
+      "illustration 1": {
+        "value": "{Colour.Dark pink}",
+        "type": "color"
+      },
+      "illustration 2": {
+        "value": "{Colour.Gold}",
+        "type": "color"
+      },
+      "illustration 3": {
+        "value": "{Colour.Green}",
+        "type": "color"
+      },
+      "illustration 4": {
+        "value": "{Colour.Mid blue}",
+        "type": "color"
+      }
+    }
+  },
+  "Typography": {
+    "button": {
+      "button label": {
+        "value": "{Typography.Font Family.font-family-body}",
+        "type": "text"
+      }
+    },
+    "family": {
+      "paragraph": {
+        "value": "{Typography.Font Family.font-family-body}",
+        "type": "text"
+      },
+      "heading": {
+        "value": "{Typography.Font Family.font-family-display}",
+        "type": "text"
+      }
+    },
+    "font family": {
+      "font-family-body": {
+        "value": "{Typography.Font Family.font-family-body}",
+        "type": "text"
+      },
+      "font-family-display": {
+        "value": "{Typography.Font Family.font-family-display}",
+        "type": "text"
+      }
+    }
+  },
+  "Radius": {
+    "Button": {
+      "value": "{radius-full}",
+      "type": "dimension"
+    }
+  }
+}

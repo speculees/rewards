@@ -1,0 +1,444 @@
+{
+  "Colour": {
+    "Primary purple": {
+      "value": "#5e10b1",
+      "type": "color"
+    },
+    "Mid grey": {
+      "value": "#646068",
+      "type": "color"
+    },
+    "Light purple": {
+      "value": "#f2eaf9",
+      "type": "color"
+    },
+    "Dark grey": {
+      "value": "#333333",
+      "type": "color"
+    },
+    "Lightest purple": {
+      "value": "#f2f2f8",
+      "type": "color"
+    },
+    "Mid blue": {
+      "value": "#006fe6",
+      "type": "color"
+    },
+    "White": {
+      "value": "#ffffff",
+      "type": "color"
+    },
+    "Green": {
+      "value": "#3ad356",
+      "type": "color"
+    },
+    "Dark Purple": {
+      "value": "#5a287d",
+      "type": "color"
+    },
+    "Gold": {
+      "value": "#fbb200",
+      "type": "color"
+    },
+    "Light blue": {
+      "value": "#dbedfa",
+      "type": "color"
+    },
+    "Pink": {
+      "value": "#ffeae6",
+      "type": "color"
+    },
+    "Inactive grey": {
+      "value": "#b3b3b3",
+      "type": "color"
+    },
+    "Dark pink": {
+      "value": "#e51565",
+      "type": "color"
+    },
+    "Darkest purple": {
+      "value": "#3c1053",
+      "type": "color"
+    },
+    "Transparent": {
+      "value": "#ffffff00",
+      "type": "color"
+    },
+    "Black": {
+      "value": "#000000",
+      "type": "color"
+    }
+  },
+  "Typography": {
+    "Font Weight": {
+      "font-weight-black": {
+        "value": "Black",
+        "type": "text"
+      },
+      "font-weight-bold": {
+        "value": "Bold",
+        "type": "text"
+      },
+      "font-weight-semibold": {
+        "value": "Semi Bold",
+        "type": "text"
+      },
+      "font-weight-medium": {
+        "value": "Medium",
+        "type": "text"
+      },
+      "font-weight-regular": {
+        "value": "Regular",
+        "type": "text"
+      }
+    },
+    "Font Family": {
+      "font-family-body": {
+        "value": "RN House Sans",
+        "type": "text"
+      },
+      "font-family-display": {
+        "value": "RN House Sans",
+        "type": "text"
+      }
+    },
+    "Font Size": {
+      "font-size-xl": {
+        "value": "1.25rem",
+        "type": "dimension"
+      },
+      "font-size-md": {
+        "value": "1rem",
+        "type": "dimension"
+      },
+      "font-size-xxl": {
+        "value": "1.5rem",
+        "type": "dimension"
+      },
+      "font-size-sm": {
+        "value": "0.875rem",
+        "type": "dimension"
+      },
+      "font-size-xs": {
+        "value": "0.75rem",
+        "type": "dimension"
+      },
+      "font-size-6xl": {
+        "value": "3.5rem",
+        "type": "dimension"
+      },
+      "font-size-9xl": {
+        "value": "5rem",
+        "type": "dimension"
+      },
+      "font-size-lg": {
+        "value": "1.125rem",
+        "type": "dimension"
+      },
+      "font-size-8xl": {
+        "value": "4.5rem",
+        "type": "dimension"
+      },
+      "font-size-3xl": {
+        "value": "2rem",
+        "type": "dimension"
+      },
+      "font-size-4xl": {
+        "value": "2.5rem",
+        "type": "dimension"
+      },
+      "font-size-7xl": {
+        "value": "4rem",
+        "type": "dimension"
+      },
+      "font-size-5xl": {
+        "value": "3rem",
+        "type": "dimension"
+      }
+    },
+    "Letter Spacing": {
+      "letter-spacing-dense": {
+        "value": "-0.062rem",
+        "type": "dimension"
+      },
+      "letter-spacing-normal": {
+        "value": "0rem",
+        "type": "dimension"
+      },
+      "letter-spacing-denser": {
+        "value": "-0.125rem",
+        "type": "dimension"
+      }
+    },
+    "Line Height": {
+      "line-height-8xl": {
+        "value": "5.625rem",
+        "type": "dimension"
+      },
+      "line-height-7xl": {
+        "value": "5rem",
+        "type": "dimension"
+      },
+      "line-height-5xl": {
+        "value": "4rem",
+        "type": "dimension"
+      },
+      "line-height-lg": {
+        "value": "1.625rem",
+        "type": "dimension"
+      },
+      "line-height-md": {
+        "value": "1.5rem",
+        "type": "dimension"
+      },
+      "line-height-xs": {
+        "value": "1rem",
+        "type": "dimension"
+      },
+      "line-height-9xl": {
+        "value": "6.25rem",
+        "type": "dimension"
+      },
+      "line-height-sm": {
+        "value": "1.25rem",
+        "type": "dimension"
+      },
+      "line-height-3xl": {
+        "value": "2.75rem",
+        "type": "dimension"
+      },
+      "line-height-4xl": {
+        "value": "3.5rem",
+        "type": "dimension"
+      },
+      "line-height-6xl": {
+        "value": "4.375rem",
+        "type": "dimension"
+      },
+      "line-height-xxl": {
+        "value": "2rem",
+        "type": "dimension"
+      },
+      "line-height-xl": {
+        "value": "1.75rem",
+        "type": "dimension"
+      }
+    }
+  },
+  "Spacing": {
+    "spacing-4xl": {
+      "value": "1.125rem",
+      "type": "dimension"
+    },
+    "spacing-xxl": {
+      "value": "0.875rem",
+      "type": "dimension"
+    },
+    "spacing-xl": {
+      "value": "0.75rem",
+      "type": "dimension"
+    },
+    "spacing-xs": {
+      "value": "0.25rem",
+      "type": "dimension"
+    },
+    "spacing-lg": {
+      "value": "0.625rem",
+      "type": "dimension"
+    },
+    "spacing-14xl": {
+      "value": "5rem",
+      "type": "dimension"
+    },
+    "spacing-md": {
+      "value": "0.5rem",
+      "type": "dimension"
+    },
+    "spacing-11xl": {
+      "value": "3rem",
+      "type": "dimension"
+    },
+    "spacing-3xl": {
+      "value": "1rem",
+      "type": "dimension"
+    },
+    "spacing-15xl": {
+      "value": "6rem",
+      "type": "dimension"
+    },
+    "spacing-10xl": {
+      "value": "2.5rem",
+      "type": "dimension"
+    },
+    "spacing-9xl": {
+      "value": "2.25rem",
+      "type": "dimension"
+    },
+    "spacing-7xl": {
+      "value": "1.75rem",
+      "type": "dimension"
+    },
+    "spacing-8xl": {
+      "value": "2rem",
+      "type": "dimension"
+    },
+    "spacing-6xl": {
+      "value": "1.5rem",
+      "type": "dimension"
+    },
+    "spacing-13xl": {
+      "value": "4rem",
+      "type": "dimension"
+    },
+    "spacing-12xl": {
+      "value": "3.5rem",
+      "type": "dimension"
+    },
+    "spacing-sm": {
+      "value": "0.375rem",
+      "type": "dimension"
+    },
+    "spacing-5xl": {
+      "value": "1.25rem",
+      "type": "dimension"
+    },
+    "spacing-xxs": {
+      "value": "0.125rem",
+      "type": "dimension"
+    },
+    "spacing-none": {
+      "value": "0rem",
+      "type": "dimension"
+    }
+  },
+  "spacing-4xl": {
+    "value": "1.125rem",
+    "type": "dimension"
+  },
+  "spacing-xxl": {
+    "value": "0.875rem",
+    "type": "dimension"
+  },
+  "spacing-xl": {
+    "value": "0.75rem",
+    "type": "dimension"
+  },
+  "spacing-xs": {
+    "value": "0.25rem",
+    "type": "dimension"
+  },
+  "spacing-lg": {
+    "value": "0.625rem",
+    "type": "dimension"
+  },
+  "spacing-14xl": {
+    "value": "5rem",
+    "type": "dimension"
+  },
+  "spacing-md": {
+    "value": "0.5rem",
+    "type": "dimension"
+  },
+  "spacing-11xl": {
+    "value": "3rem",
+    "type": "dimension"
+  },
+  "spacing-3xl": {
+    "value": "1rem",
+    "type": "dimension"
+  },
+  "spacing-15xl": {
+    "value": "6rem",
+    "type": "dimension"
+  },
+  "spacing-10xl": {
+    "value": "2.5rem",
+    "type": "dimension"
+  },
+  "spacing-9xl": {
+    "value": "2.25rem",
+    "type": "dimension"
+  },
+  "spacing-7xl": {
+    "value": "1.75rem",
+    "type": "dimension"
+  },
+  "spacing-8xl": {
+    "value": "2rem",
+    "type": "dimension"
+  },
+  "spacing-6xl": {
+    "value": "1.5rem",
+    "type": "dimension"
+  },
+  "spacing-13xl": {
+    "value": "4rem",
+    "type": "dimension"
+  },
+  "spacing-12xl": {
+    "value": "3.5rem",
+    "type": "dimension"
+  },
+  "spacing-sm": {
+    "value": "0.375rem",
+    "type": "dimension"
+  },
+  "spacing-5xl": {
+    "value": "1.25rem",
+    "type": "dimension"
+  },
+  "spacing-xxs": {
+    "value": "0.125rem",
+    "type": "dimension"
+  },
+  "spacing-none": {
+    "value": "0rem",
+    "type": "dimension"
+  },
+  "Radius": {
+    "radius-2xl": {
+      "value": "0.875rem",
+      "type": "dimension"
+    },
+    "radius-md": {
+      "value": "0.5rem",
+      "type": "dimension"
+    },
+    "radius-3xl": {
+      "value": "1rem",
+      "type": "dimension"
+    },
+    "radius-xs": {
+      "value": "0.25rem",
+      "type": "dimension"
+    },
+    "radius-4xl": {
+      "value": "1.125rem",
+      "type": "dimension"
+    },
+    "radius-lg": {
+      "value": "0.625rem",
+      "type": "dimension"
+    },
+    "radius-sm": {
+      "value": "0.375rem",
+      "type": "dimension"
+    },
+    "radius-xl": {
+      "value": "0.75rem",
+      "type": "dimension"
+    },
+    "radius-none": {
+      "value": "0rem",
+      "type": "dimension"
+    },
+    "radius-full": {
+      "value": "62.438rem",
+      "type": "dimension"
+    },
+    "radius-xxs": {
+      "value": "0.125rem",
+      "type": "dimension"
+    }
+  }
+}

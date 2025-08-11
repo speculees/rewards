@@ -1,3 +1,4 @@
+//tsconfig.base.json
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -10,13 +11,24 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@rewards-ds/ui": ["libs/ui/src/index.ts"]
+      "@rewards-ds/ui": [
+        "dist/libs/ui"
+      ],
+      "@rewards-ds/ui/*": [
+        "dist/libs/ui/*"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

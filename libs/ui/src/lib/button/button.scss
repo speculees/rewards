@@ -26,19 +26,39 @@
 .rui-button {
   display: inline-block;
   box-sizing: border-box;
-  padding: var(--global-spacing-sm) var(--global-spacing-md);
-  font: inherit;
-  font-size: var(--global-font-size-base);
-  border-radius: var(--global-radius-md);
+  padding: var(--spacing-3xl) var(--spacing-5xl);
+  font-family: var(--typography-font-family-font-family-body);
+  font-size: var(--typography-font-size-font-size-md);
+  font-weight: var(--typography-font-weight-font-weight-medium);
+  border-radius: var(--radius-button);
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 
   &--primary {
-    @include rui-button-style(var(--light-color-primary), var(--light-color-text));
+    @include rui-button-style(
+      var(--colours-buttons-primary-default), 
+      var(--colours-buttons-primary-text-active)
+    );
+
+    &:hover:not(.rui-button--disabled) {
+      background-color: var(--colours-buttons-primary-hover-pressed);
+    }
+
+    &.rui-button--disabled {
+      background-color: var(--colours-buttons-primary-disabled);
+      color: var(--colours-buttons-primary-text-disabled);
+    }
   }
 
   &--secondary {
-    @include rui-button-style(var(--dark-color-primary), var(--dark-color-text));
+    @include rui-button-style(
+      var(--colours-buttons-secondary-secondary), 
+      var(--colours-buttons-secondary-text-active)
+    );
+
+    &.rui-button--disabled {
+      color: var(--colours-buttons-secondary-text-disabled);
+    }
   }
 }

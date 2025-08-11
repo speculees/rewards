@@ -1,21 +1,17 @@
-// tools/link-ui.ts
 import { execSync } from 'child_process';
-import { join } from 'path';
+import { join, relative } from 'path';
 
 const distPath = join(__dirname, '../../..', 'dist/libs/ui');
+const appPath = join(__dirname, '../../..', 'apps/rewards-ds');
 
 try {
   console.log('🔧 Building UI library...');
   execSync('pnpx nx build ui', { stdio: 'inherit' });
 
-  console.log('🔗 Linking UI library globally...');
-  execSync(`pnpm link --global ${distPath}`, { stdio: 'inherit' });
+  console.log('🔗 Installing local UI package in rewards-ds...');
+  const relativeDistPath = relative(appPath, distPath).replace(/\\/g, '/');
+  execSync(`pnpm install "${relativeDistPath}"`, { cwd: appPath, stdio: 'inherit' });
 
-  console.log('🔗 Linking UI library into rewards-ds app...');
-  execSync('pnpm link @rewards-ds/ui', {
-    cwd: join(__dirname, '../../..', 'apps/rewards-ds'),
-    stdio: 'inherit',
-  });
 
   console.log('✅ Linked successfully!');
 } catch (err) {

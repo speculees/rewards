@@ -1,0 +1,9 @@
+{
+  "tokenSetOrder": [
+    "global",
+    "Modes/Reward",
+    "Modes/Natwest",
+    "Primitive-Reward/Value",
+    "Primitive-Natwest/Mode 1"
+  ]
+}

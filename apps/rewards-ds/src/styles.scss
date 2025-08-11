@@ -1,2 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
-@use '@rewards-ds/ui/scss/variables';
+/* Demo App Styles - Rewards Design System */
+
+/* Import both theme classes for dynamic switching */
+@import '@rewards-ds/ui/scss/reward-classes';
+@import '@rewards-ds/ui/scss/natwest-classes';
+
+/* Global app styles */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: var(--typography-font-family-font-family-body, 'Inter', sans-serif);
+}
