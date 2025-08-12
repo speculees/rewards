@@ -1,3 +1,7 @@
+// Import generated design tokens
+@use '../tokens/generated/reward-classes';
+@use '../tokens/generated/natwest-classes';
+
 // Basic global styles
 body {
   font-family: var(--typography-font-family-font-family-body, 'Inter', sans-serif);

@@ -20,10 +20,10 @@
     "baseUrl": ".",
     "paths": {
       "@rewards-ds/ui": [
-        "dist/libs/ui"
+        "libs/ui/src/public_api.ts"
       ],
       "@rewards-ds/ui/*": [
-        "dist/libs/ui/*"
+        "libs/ui/*"
       ]
     }
   },

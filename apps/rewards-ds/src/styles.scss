@@ -1,8 +1,8 @@
 /* Demo App Styles - Rewards Design System */
 
-/* Import both theme classes for dynamic switching */
-@import '@rewards-ds/ui/scss/reward-classes';
-@import '@rewards-ds/ui/scss/natwest-classes';
+/* Import both theme classes for dynamic switching from the UI library */
+@use '@rewards-ds/ui/tokens/generated/reward-classes';
+@use '@rewards-ds/ui/tokens/generated/natwest-classes';
 
 /* Global app styles */
 body {

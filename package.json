@@ -2,7 +2,24 @@
   "name": "@rewards-ds/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "pnpm nx run-many --target=build --projects=ui,rewards-ds",
+    "build:ui": "pnpm nx build ui",
+    "build:app": "pnpm nx build rewards-ds",
+    "serve": "pnpm nx serve rewards-ds",
+    "serve:app": "pnpm nx serve rewards-ds",
+    "storybook": "pnpm nx storybook ui",
+    "build-storybook": "pnpm nx build-storybook ui",
+    "test": "pnpm nx run-many --target=test --projects=ui,rewards-ds",
+    "test:ui": "pnpm nx test ui",
+    "test:app": "pnpm nx test rewards-ds",
+    "lint": "pnpm nx run-many --target=lint --projects=ui,rewards-ds",
+    "lint:ui": "pnpm nx lint ui",
+    "lint:app": "pnpm nx lint rewards-ds",
+    "build-tokens": "pnpm nx build-tokens ui",
+    "dev": "pnpm nx serve rewards-ds",
+    "clean": "pnpm nx reset"
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "~20.1.0",
@@ -14,7 +31,6 @@
     "@angular/router": "~20.1.0",
     "qrcode": "^1.5.4",
     "rxjs": "~7.8.0",
-    "ui": "link:..\\..\\dist\\libs\\ui",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
