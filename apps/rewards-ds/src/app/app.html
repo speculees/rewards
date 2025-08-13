@@ -30,51 +30,51 @@
       <div class="button-grid">
         <div class="button-group">
           <h4>Primary Buttons</h4>
-          <button ruiButton color="primary" variant="contained">
-            Primary Button
-          </button>
-          <button ruiButton color="primary" variant="contained" disabled>
-            Disabled
-          </button>
+          <button ruiButton type="primary">Primary Button</button>
+          <button ruiButton type="primary" disabled>Disabled</button>
         </div>
 
         <div class="button-group">
           <h4>Secondary Buttons</h4>
-          <button ruiButton color="secondary" variant="outlined">
-            Secondary Button
-          </button>
-          <button ruiButton color="secondary" variant="outlined" disabled>
-            Disabled
-          </button>
+          <button ruiButton type="secondary">Secondary Button</button>
+          <button ruiButton type="secondary" disabled>Disabled</button>
         </div>
 
         <div class="button-group">
-          <h4>Text Buttons</h4>
-          <button ruiButton color="primary" variant="text">Text Button</button>
-          <button ruiButton color="secondary" variant="text">
-            Secondary Text
+          <h4>White Buttons</h4>
+          <button ruiButton type="white">White Button</button>
+          <button ruiButton type="white" disabled>Disabled</button>
+        </div>
+
+        <div class="button-group">
+          <h4>Tertiary Buttons</h4>
+          <button ruiButton type="tertiary">Tertiary Button</button>
+          <button ruiButton type="tertiary" disabled>Disabled</button>
+        </div>
+
+        <div class="button-group">
+          <h4>Pill Buttons</h4>
+          <button ruiButton type="pill">Pill Button</button>
+          <button ruiButton type="pill" disabled>Disabled</button>
+        </div>
+
+        <div class="button-group">
+          <h4>Icon Buttons</h4>
+          <button ruiButton type="icon" aria-label="Settings">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+            </svg>
+          </button>
+          <button ruiButton type="icon" disabled aria-label="Disabled settings">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+            </svg>
           </button>
         </div>
       </div>
     </section>
 
-    <section class="token-info">
-      <h2>Current Theme: {{ currentTheme | titlecase }}</h2>
-      <div class="token-display">
-        <div class="token-item">
-          <div class="color-swatch primary"></div>
-          <span>Primary Color</span>
-        </div>
-        <div class="token-item">
-          <div class="color-swatch background"></div>
-          <span>Background</span>
-        </div>
-        <div class="token-item">
-          <div class="radius-demo"></div>
-          <span>Button Radius</span>
-        </div>
-      </div>
-    </section>
+
   </main>
 </div>
 

@@ -1,62 +1,107 @@
-import { Meta, StoryObj } from '@storybook/angular';
-import { action } from 'storybook/actions';
-import { ButtonComponent } from './button';
+import type { Meta, StoryObj } from '@storybook/angular';
+import { ButtonComponent, ButtonType  } from './button';
 
-const meta: Meta<ButtonComponent> = {
-  title: 'Product/Button',
+// Define a type for Storybook args that extends the component inputs
+type ButtonStoryArgs = {
+  type: ButtonType;
+  disabled: boolean;
+  label: string;  // Storybook-only property for content
+};
+
+const meta: Meta<ButtonStoryArgs> = {
+  title: 'Components/Button',
   component: ButtonComponent,
+  tags: ['autodocs'],
+  render: (args) => ({
+    props: {
+      type: args.type,
+      disabled: args.disabled
+    },
+    template: `
+      <button ruiButton [type]="type" [disabled]="disabled">
+        ${args.label}
+      </button>
+    `,
+  }),
   args: {
-    color: 'primary',
-    variant: 'contained',
     disabled: false,
+    label: 'Button'
   },
   argTypes: {
-    color: {
-      options: ['primary', 'secondary'],
-      control: { type: 'radio' },
-    },
-    variant: {
-      options: ['contained', 'outlined', 'text'],
-      control: { type: 'radio' },
-    },
     disabled: {
-      control: { type: 'boolean' },
+      control: 'boolean',
+      description: 'Whether the button is disabled',
+    },
+    label: {
+      control: 'text',
+      description: 'Button text content (Storybook only)',
+      table: {
+        category: 'Storybook',
+      }
     },
   },
 };
 
 export default meta;
+type Story = StoryObj<ButtonStoryArgs>;
 
-export const Default: StoryObj<ButtonComponent> = {
+export const Primary: Story = {
+  args: {
+    type: 'primary',
+    label: 'Primary Button'
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    type: 'secondary',
+    label: 'Secondary Button'
+  },
+};
+
+export const White: Story = {
+  args: {
+    type: 'white',
+    label: 'White Button'
+  },
+};
+
+export const Tertiary: Story = {
+  args: {
+    type: 'tertiary',
+    label: 'Tertiary Button'
+  },
+};
+
+export const Pill: Story = {
+  args: {
+    type: 'pill',
+    label: 'Pill Button'
+  },
+};
+
+export const Icon: Story = {
+  args: {
+    type: 'icon',
+    label: '✕'
+  },
   render: (args) => ({
-    props: { args, onClick: action('clicked') },
+    props: {
+      type: args.type,
+      disabled: args.disabled
+    },
     template: `
-      <button ruiButton
-        (click)="onClick($event)"
-        [color]="args.color"
-        [disabled]="args.disabled"
-        [variant]="args.variant">
-        Button
+      <button ruiButton type="icon" [disabled]="disabled" aria-label="Close">
+        ${args.label}
       </button>
     `,
   }),
 };
 
-export const Link: StoryObj<ButtonComponent> = {
-  render: (args) => ({
-    props: { args },
-    template: `
-      <a ruiButton
-        href="#"
-        target="_blank"
-        [color]="args.color"
-        [disabled]="args.disabled"
-        [variant]="args.variant">
-        Link
-      </a>
-    `,
-  }),
+export const Disabled: Story = {
   args: {
-    variant: 'text',
-  }
+    type: 'primary',
+    disabled: true,
+    label: 'Disabled Button'
+  },
 };

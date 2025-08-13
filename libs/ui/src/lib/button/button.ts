@@ -1,18 +1,7 @@
 import { booleanAttribute, Component, Input, ViewEncapsulation } from '@angular/core';
 
-/**
- * Button
- *
- * @description
- * A simple button component that can be used to trigger actions.
- *
- * @export
- * @class ButtonComponent
- *
- * @example
- * <button ruiButton>Button</button>
- * <a ruiButton href="#">Link</a>
- */
+export type ButtonType = 'primary' | 'secondary' | 'white' | 'tertiary' | 'pill' | 'icon';
+
 @Component({
   selector: '[ruiButton]',
   template: '<ng-content></ng-content>',
@@ -21,16 +10,17 @@ import { booleanAttribute, Component, Input, ViewEncapsulation } from '@angular/
   styleUrl: './button.scss',
   host: {
     '[class.rui-button]': 'true',
-    '[class.rui-button--contained]': 'variant === "contained"',
-    '[class.rui-button--outlined]': 'variant === "outlined"',
-    '[class.rui-button--text]': 'variant === "text"',
-    '[class.rui-button--primary]': 'color === "primary"',
-    '[class.rui-button--secondary]': 'color === "secondary"',
+    '[class.rui-button--primary]': 'type === "primary"',
+    '[class.rui-button--secondary]': 'type === "secondary"',
+    '[class.rui-button--white]': 'type === "white"',
+    '[class.rui-button--tertiary]': 'type === "tertiary"',
+    '[class.rui-button--pill]': 'type === "pill"',
+    '[class.rui-button--icon]': 'type === "icon"',
     '[class.rui-button--disabled]': 'disabled',
+    '[attr.disabled]': 'disabled || null',
   },
 })
 export class ButtonComponent {
-  @Input() variant = 'contained';
-  @Input() color = 'primary';
+  @Input() type: ButtonType = 'primary';
   @Input({ transform: booleanAttribute }) disabled = false;
 }

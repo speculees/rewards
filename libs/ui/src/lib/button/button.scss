@@ -1,64 +1,160 @@
-@mixin rui-button-style($bg, $fg, $border: null) {
-  &.rui-button--contained {
-    background-color: $bg;
-    border: 1px solid if($border != null, $border, $bg);
-    color: $fg;
-  }
-
-  &.rui-button--outlined {
-    background-color: transparent;
-    border: 1px solid if($border != null, $border, $bg);
-    color: $bg;
-  }
-
-  &.rui-button--text {
-    background-color: transparent;
-    border: none;
-    color: $bg;
-  }
-
-  &.rui-button--disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
-}
-
 .rui-button {
-  display: inline-block;
-  box-sizing: border-box;
-  padding: var(--spacing-spacing-3xl) var(--spacing-spacing-5xl);
-  font-family: var(--typography-font-family-font-family-body);
-  font-size: var(--typography-font-size-font-size-md);
-  font-weight: var(--typography-font-weight-font-weight-medium);
+  // Base button styles
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: var(--radius-button);
-  text-align: center;
+  padding: var(--spacing-spacing-md) var(--spacing-spacing-lg);
+  font-family: var(--typography-font-family-font-family-body); // Using the body font family
+  font-weight: var(--typography-font-weight-font-weight-medium);
+  font-size: var(--typography-font-size-font-size-sm);
+  line-height: var(--typography-line-height-line-height-sm);
+  letter-spacing: var(--typography-letter-spacing-letter-spacing-normal);
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  border: none;
+  outline: none;
+  text-decoration: none;
 
+  // Disabled state
+  &--disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  // Primary (solid blue)
   &--primary {
-    @include rui-button-style(
-      var(--colours-buttons-primary-default), 
-      var(--colours-buttons-primary-text-active)
-    );
+    background-color: var(--colours-buttons-primary-default);
+    color: var(--colours-buttons-primary-white);
 
     &:hover:not(.rui-button--disabled) {
       background-color: var(--colours-buttons-primary-hover-pressed);
     }
 
+    &:active:not(.rui-button--disabled) {
+      background-color: var(--colours-buttons-primary-hover-pressed);
+      transform: translateY(1px);
+    }
+
     &.rui-button--disabled {
       background-color: var(--colours-buttons-primary-disabled);
+    }
+  }
+
+  // Secondary (outline white)
+  &--secondary {
+    background-color: transparent;
+    border: 1px solid var(--colours-utility-white);
+    color: var(--colours-utility-white);
+
+    &:hover:not(.rui-button--disabled) {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &:active:not(.rui-button--disabled) {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(1px);
+    }
+
+    &.rui-button--disabled {
+      border-color: var(--colours-icons-disabled);
+      color: var(--colours-icons-disabled);
+    }
+  }
+
+  // Tertiary (solid gray)
+  &--white {
+    background-color: var(--colours-utility-white);
+    color: var(--colours-heading-2);
+
+
+    &:hover:not(.rui-button--disabled) {
+      background-color: var(--colour-gray-25);
+    }
+
+    &:active:not(.rui-button--disabled) {
+      background-color: var(--colour-gray-50);
+      transform: translateY(1px);
+    }
+
+    &.rui-button--disabled {
+      background-color: var(--colour-gray-100);
       color: var(--colours-buttons-primary-text-disabled);
     }
   }
 
-  &--secondary {
-    @include rui-button-style(
-      var(--colours-buttons-secondary-secondary), 
-      var(--colours-buttons-secondary-text-active)
-    );
+  // Text (link style)
+  &--tertiary {
+    background-color: transparent;
+    color: var(--colours-buttons-primary-default);
+    padding: 0;
+    text-decoration: underline;
+    font-weight: var(--typography-font-weight-font-weight-medium);
+
+    &:hover:not(.rui-button--disabled) {
+      opacity: 0.8;
+    }
+
+    &:active:not(.rui-button--disabled) {
+      opacity: 0.6;
+      transform: translateY(1px);
+    }
 
     &.rui-button--disabled {
-      color: var(--colours-buttons-secondary-text-disabled);
+      color: var(--colours-icons-disabled);
     }
+  }
+
+  // Pill (small rounded)
+  &--pill {
+    background-color: var(--colours-utility-white);
+    color: var(--colours-buttons-primary-default);
+    border-radius: var(--radius-full);
+    padding: var(--spacing-spacing-xs) var(--spacing-spacing-md);
+    font-size: var(--typography-font-size-font-size-xs);
+    line-height: var(--typography-line-height-line-height-xs);
+
+    &:hover:not(.rui-button--disabled) {
+      background-color: var(--colours-background-background-2);
+      color: var(--colours-buttons-primary-default);
+    }
+
+    &:active:not(.rui-button--disabled) {
+      transform: translateY(1px);
+    }
+  }
+
+  // Icon (circular)
+  &--icon {
+    padding: var(--spacing-spacing-sm);
+    border-radius: var(--radius-full);
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    background-color: var(--colours-buttons-primary-white);
+    color: var(--colours-buttons-primary-default);
+    font-size: var(--typography-font-size-font-size-md);
+
+    &:hover:not(.rui-button--disabled) {
+      background-color: var(--colours-background-background-2);
+      color: var(--colours-buttons-primary-default);
+    }
+
+    &:active:not(.rui-button--disabled) {
+      transform: translateY(1px);
+    }
+  }
+
+  // Size variations
+  &--small {
+    padding: var(--spacing-spacing-xs) var(--spacing-spacing-md);
+    font-size: var(--typography-font-size-font-size-xs);
+    line-height: var(--typography-line-height-line-height-xs);
+  }
+
+  &--large {
+    padding: var(--spacing-spacing-lg) var(--spacing-spacing-xl);
+    font-size: var(--typography-font-size-font-size-md);
+    line-height: var(--typography-line-height-line-height-md);
   }
 }
