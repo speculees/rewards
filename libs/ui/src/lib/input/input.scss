@@ -6,9 +6,10 @@
   font-family: var(--typography-font-family-font-family-body);
   border-radius: var(--radius-md);
   border: 1px solid var(--colours-buttons-primary-default);
-  background-color: var(--colours-background-background-1);
+  background-color: var(--colour-gray-sand-100);
   color: var(--colours-body-1);
   transition: border-color 0.3s ease;
+  border: none;
 
   &--focused {
     outline: 2px solid var(--colours-buttons-primary-default);

@@ -1,0 +1,22 @@
+.rui-form-field {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  border-radius: var(--radius-xs);
+  padding: 0.25rem 0.5rem;
+  background-color: var(--colour-gray-sand-100);
+
+  > rui-input {
+    flex: 1;
+  }
+
+  > [ruiPrefix] {
+    flex-shrink: 0;
+    margin: 0 0.5rem;
+  }
+
+  > [ruiSuffix] {
+    flex-shrink: 0;
+    margin: 0 0.5rem;
+  }
+}
