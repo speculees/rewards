@@ -57,7 +57,6 @@ export const WithIcon: StoryObj<InputComponent> = {
       onBlur: action('blurred'),
       onChange: action('changed'),
     },
-    // imports: [InputComponent, IconComponent],
     template: `
       <rui-form-field>
          <rui-icon ruiPrefix>

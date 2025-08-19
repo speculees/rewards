@@ -1,25 +1,20 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  Input,
   ViewEncapsulation,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'rui-pill',
-  template: '<ng-content></ng-content>',
-  styleUrl: './pill.scss',
+  selector: 'rui-pill-group',
   imports: [CommonModule],
+  template: `<ng-content></ng-content>`,
+  styleUrl: './pill-group.scss',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   host: {
-    '[class.rui-pill]': 'true',
-    '[class.rui-pill--default]': `variant === 'dark'`,
-    '[class.rui-pill--light]': `variant === 'light'`,
+    '[class.rui-pill-group]': 'true',
   },
 })
-export class PillComponent {
-  @Input() variant?: 'dark' | 'light';
-}
+export class PillGroupComponent {}

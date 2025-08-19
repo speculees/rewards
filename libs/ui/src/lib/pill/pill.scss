@@ -4,19 +4,21 @@
 }
 
 .rui-pill {
-  display: inline-block;
-  padding: var(--global-spacing-sm) var(--global-spacing-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: var(--spacing-spacing-sm) var(--spacing-spacing-xl);
   font-size: var(--global-font-size-base);
-  border-radius: var(--global-radius-md);
+  border-radius: var(--radius-3xl);
   cursor: pointer;
-  background-color: var(--light-color-primary);
-  color: var(--dark-color-text);
+  background-color: var(--colour-primary-purple);
+  color: var(--colour-white);
 
-  &--success {
-    @include pill-colors(#28a745, white);
+  &--dark {
+    @include pill-colors(var(--colour-primary-purple), var(--colour-white));
   }
 
-  &--error {
-    @include pill-colors(#e01f1f, white);
+  &--light {
+    @include pill-colors(var(--colour-gray-sand-100), var(--colour-black));
   }
 }
