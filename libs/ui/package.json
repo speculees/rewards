@@ -1,8 +1,8 @@
 {
   "name": "@rewards-ds/ui",
   "version": "0.0.1",
-  "module": "esm2022/rewards-ds-ui.js",
-  "typings": "rewards-ds-ui.d.ts",
+  "module": "dist/esm2022/rewards-ds-ui.js",
+  "typings": "dist/rewards-ds-ui.d.ts",
   "peerDependencies": {
     "@angular/animations": "^20.1.0",
     "@angular/common": "^20.1.0",

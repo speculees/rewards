@@ -17,7 +17,7 @@
     },
     "build": {
       "executor": "@nx/angular:ng-packagr-lite",
-      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "outputs": ["{workspaceRoot}/libs/{projectRoot}/dist"],
       "options": {
         "project": "libs/ui/ng-package.json"
       },
@@ -29,8 +29,7 @@
           "tsConfig": "libs/ui/tsconfig.lib.json"
         }
       },
-      "defaultConfiguration": "production",
-      "dependsOn": ["build-tokens"]
+      "defaultConfiguration": "production"
     },
     "test": {
       "executor": "@nx/jest:jest",

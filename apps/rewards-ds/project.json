@@ -6,12 +6,6 @@
   "sourceRoot": "apps/rewards-ds/src",
   "tags": [],
   "targets": {
-    "link-ui": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "tsx apps/rewards-ds/tools/link-ui.ts"
-      }
-    },
     "build": {
       "executor": "@angular/build:application",
       "outputs": ["{options.outputPath}"],
