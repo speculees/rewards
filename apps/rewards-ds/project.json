@@ -21,7 +21,10 @@
             "input": "apps/rewards-ds/public"
           }
         ],
-        "styles": ["apps/rewards-ds/src/styles.scss"]
+        "styles": [
+          "apps/rewards-ds/src/styles.scss",
+          "libs/tokens/dist/default.css"
+        ]
       },
       "configurations": {
         "production": {
