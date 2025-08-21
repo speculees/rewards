@@ -1,7 +1,4 @@
 import StyleDictionary from 'style-dictionary';
-import merge from 'lodash.merge';
-import fs from 'fs';
-import type { DesignTokens } from 'node_modules/style-dictionary/types/DesignToken';
 
 type Theme = {
   id: string;
