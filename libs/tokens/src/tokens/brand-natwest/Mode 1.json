@@ -346,58 +346,58 @@
     },
     "font-size": {
       "-": {
-        "value": 0,
-        "type": "number"
+        "value": "0rem",
+        "type": "dimension"
       }
     },
     "letter-spacing": {
       "-": {
-        "value": 0,
-        "type": "number"
+        "value": "0rem",
+        "type": "dimension"
       }
     },
     "line-height": {
       "-": {
-        "value": 0,
-        "type": "number"
+        "value": "0rem",
+        "type": "dimension"
       }
     }
   },
   "size": {
     "spacing": {
       "-": {
-        "value": 0,
-        "type": "number"
+        "value": "0rem",
+        "type": "dimension"
       }
     },
     "radius": {
       "-": {
-        "value": 0,
-        "type": "number"
+        "value": "0rem",
+        "type": "dimension"
       }
     },
     "stroke": {
       "-": {
-        "value": 0,
-        "type": "number"
+        "value": "0rem",
+        "type": "dimension"
       }
     },
     "blur": {
       "-": {
-        "value": 0,
-        "type": "number"
+        "value": "0rem",
+        "type": "dimension"
       }
     },
     "icon": {
       "-": {
-        "value": 0,
-        "type": "number"
+        "value": "0rem",
+        "type": "dimension"
       }
     },
     "depth": {
       "-": {
-        "value": 0,
-        "type": "number"
+        "value": "0rem",
+        "type": "dimension"
       }
     }
   }
