@@ -8,40 +8,22 @@ type Theme = {
   };
 }
 
-// read themes json from src/tokens/$themes.json
-function readThemes(): Theme[] {
-  return require('./tokens/$themes.json');
-}
-
-// /**
-//  * Merge brand + mode JSONs into a single token object
-//  */
-// function loadAndMergeSources(sources: string[]) {
-//   let merged: DesignTokens = {};
-//   for (const src of sources) {
-//     const json = JSON.parse(fs.readFileSync(src, "utf8"));
-//     merged = merge(json, merged);
-//   }
-//   return merged;
-// }
-
 function getSources(sources: Record<string, string>): string[] {
-  return Object.entries(sources)
-  .sort(([, typeA]) => typeA === 'enabled' ? -1 : 1)
-  .map(([source]) => {
-    return `./src/tokens/${source}.json`;
-  });
+  return Object
+    .entries(sources)
+    .sort(([, typeA]) => typeA === 'enabled' ? -1 : 1)
+    .map(([source]) => `./src/tokens/${source}.json`);
 }
 
-const themes = readThemes();
+const themes: Theme[] = require('./tokens/$themes.json');
 
 console.log('📦  Compiling tokens...');
 
 const promises = themes.map((theme) => {
   const destination = theme.name.toLowerCase().replace(/ /g, '-') + '.css';
+  const source = getSources(theme.selectedTokenSets);
 
   console.log('📦  Compiling to', destination);
-  const source = getSources(theme.selectedTokenSets);
   console.log('📦  Using sources', source);
 
   const sd = new StyleDictionary({
@@ -50,9 +32,7 @@ const promises = themes.map((theme) => {
       web: {
         transformGroup: "css",
         buildPath: "dist/",
-        files: [
-          { destination, format: "css/variables" }
-        ]
+        files: [{ destination, format: "css/variables" }]
       }
     }
   });
@@ -61,6 +41,6 @@ const promises = themes.map((theme) => {
   return sd.buildAllPlatforms();
 });
 
-Promise.all(promises).then(() => {
-  console.log('✅  Done');
-});
+Promise
+  .all(promises)
+  .then(() => console.log('✅  Done'));
