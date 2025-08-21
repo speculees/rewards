@@ -6,15 +6,6 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "build-tokens": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "style-dictionary build --config libs/ui/tokens/style-dictionary/config.js",
-        "cwd": ".",
-        "forwardAllArgs": true
-
-      }
-    },
     "build": {
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/libs/{projectRoot}/dist"],

@@ -1,0 +1,8 @@
+{
+  "tokenSetOrder": [
+    "brand-natwest/Mode 1",
+    "brand-default/Mode 1",
+    "tokens-modes/default",
+    "tokens-modes/natwest"
+  ]
+}

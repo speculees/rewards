@@ -1,0 +1,17 @@
+{
+  "name": "tokens",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/tokens/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build:tokens": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "ts-node ./src/main.ts",
+        "cwd": "./libs/tokens",
+        "forwardAllArgs": true
+      }
+    }
+  }
+}

@@ -1,0 +1,404 @@
+{
+  "colour": {
+    "purple": {
+      "25": {
+        "value": "#f2f2f8",
+        "type": "color"
+      },
+      "50": {
+        "value": "#f7f4f9",
+        "type": "color"
+      },
+      "100": {
+        "value": "#d6c9df",
+        "type": "color"
+      },
+      "200": {
+        "value": "#b8a3c7",
+        "type": "color"
+      },
+      "300": {
+        "value": "#997aae",
+        "type": "color"
+      },
+      "400": {
+        "value": "#795196",
+        "type": "color"
+      },
+      "500": {
+        "value": "#5a287d",
+        "type": "color"
+      },
+      "600": {
+        "value": "#482064",
+        "type": "color"
+      },
+      "700": {
+        "value": "#36184b",
+        "type": "color"
+      },
+      "800": {
+        "value": "#241032",
+        "type": "color"
+      },
+      "900": {
+        "value": "#120819",
+        "type": "color"
+      }
+    },
+    "blue": {
+      "50": {
+        "value": "#f2f8fe",
+        "type": "color"
+      },
+      "100": {
+        "value": "#bfdbf9",
+        "type": "color"
+      },
+      "200": {
+        "value": "#91c1f4",
+        "type": "color"
+      },
+      "300": {
+        "value": "#61a6f0",
+        "type": "color"
+      },
+      "400": {
+        "value": "#308aeb",
+        "type": "color"
+      },
+      "500": {
+        "value": "#006fe6",
+        "type": "color"
+      },
+      "600": {
+        "value": "#0059b8",
+        "type": "color"
+      },
+      "700": {
+        "value": "#00438a",
+        "type": "color"
+      },
+      "800": {
+        "value": "#002c5c",
+        "type": "color"
+      },
+      "900": {
+        "value": "#00162e",
+        "type": "color"
+      }
+    },
+    "neutral": {
+      "25": {
+        "value": "#f3f2f3",
+        "type": "color"
+      },
+      "50": {
+        "value": "#eeeeee",
+        "type": "color"
+      },
+      "100": {
+        "value": "#e5e5e5",
+        "type": "color"
+      },
+      "200": {
+        "value": "#cccccc",
+        "type": "color"
+      },
+      "300": {
+        "value": "#b2b2b2",
+        "type": "color"
+      },
+      "400": {
+        "value": "#999999",
+        "type": "color"
+      },
+      "500": {
+        "value": "#808080",
+        "type": "color"
+      },
+      "600": {
+        "value": "#666666",
+        "type": "color"
+      },
+      "700": {
+        "value": "#4d4d4d",
+        "type": "color"
+      },
+      "800": {
+        "value": "#333333",
+        "type": "color"
+      },
+      "900": {
+        "value": "#1a1a1a",
+        "type": "color"
+      },
+      "black": {
+        "value": "#000000",
+        "type": "color"
+      },
+      "white": {
+        "value": "#ffffff",
+        "type": "color"
+      }
+    },
+    "green": {
+      "50": {
+        "value": "#f5fdf7",
+        "type": "color"
+      },
+      "100": {
+        "value": "#cef4d5",
+        "type": "color"
+      },
+      "200": {
+        "value": "#aaecb6",
+        "type": "color"
+      },
+      "300": {
+        "value": "#85e496",
+        "type": "color"
+      },
+      "400": {
+        "value": "#5fdb76",
+        "type": "color"
+      },
+      "500": {
+        "value": "#3ad356",
+        "type": "color"
+      },
+      "600": {
+        "value": "#2ea945",
+        "type": "color"
+      },
+      "700": {
+        "value": "#237f34",
+        "type": "color"
+      },
+      "800": {
+        "value": "#175422",
+        "type": "color"
+      },
+      "900": {
+        "value": "#0c2a11",
+        "type": "color"
+      }
+    },
+    "gold": {
+      "50": {
+        "value": "#fffbf2",
+        "type": "color"
+      },
+      "100": {
+        "value": "#feecbf",
+        "type": "color"
+      },
+      "200": {
+        "value": "#fdde91",
+        "type": "color"
+      },
+      "300": {
+        "value": "#fdcf61",
+        "type": "color"
+      },
+      "400": {
+        "value": "#fcc130",
+        "type": "color"
+      },
+      "500": {
+        "value": "#fbb200",
+        "type": "color"
+      },
+      "600": {
+        "value": "#c98e00",
+        "type": "color"
+      },
+      "700": {
+        "value": "#976b00",
+        "type": "color"
+      },
+      "800": {
+        "value": "#644700",
+        "type": "color"
+      },
+      "900": {
+        "value": "#322400",
+        "type": "color"
+      }
+    },
+    "pink": {
+      "50": {
+        "value": "#fef3f7",
+        "type": "color"
+      },
+      "100": {
+        "value": "#f9c5d9",
+        "type": "color"
+      },
+      "200": {
+        "value": "#f49abd",
+        "type": "color"
+      },
+      "300": {
+        "value": "#ef6ea0",
+        "type": "color"
+      },
+      "400": {
+        "value": "#ea4182",
+        "type": "color"
+      },
+      "500": {
+        "value": "#e51565",
+        "type": "color"
+      },
+      "600": {
+        "value": "#b71151",
+        "type": "color"
+      },
+      "700": {
+        "value": "#890d3d",
+        "type": "color"
+      },
+      "800": {
+        "value": "#5c0828",
+        "type": "color"
+      },
+      "900": {
+        "value": "#2e0414",
+        "type": "color"
+      }
+    },
+    "peach": {
+      "50": {
+        "value": "#fffefe",
+        "type": "color"
+      },
+      "100": {
+        "value": "#fffaf9",
+        "type": "color"
+      },
+      "200": {
+        "value": "#fff6f4",
+        "type": "color"
+      },
+      "300": {
+        "value": "#fff2f0",
+        "type": "color"
+      },
+      "400": {
+        "value": "#ffeeeb",
+        "type": "color"
+      },
+      "500": {
+        "value": "#ffeae6",
+        "type": "color"
+      },
+      "600": {
+        "value": "#ccbbb8",
+        "type": "color"
+      },
+      "700": {
+        "value": "#998c8a",
+        "type": "color"
+      },
+      "800": {
+        "value": "#665e5c",
+        "type": "color"
+      },
+      "900": {
+        "value": "#332f2e",
+        "type": "color"
+      }
+    }
+  },
+  "typography": {
+    "font-family": {
+      "title": {
+        "value": "RN House Sans",
+        "type": "text"
+      },
+      "heading": {
+        "value": "RN House Sans",
+        "type": "text"
+      },
+      "body": {
+        "value": "RN House Sans",
+        "type": "text"
+      }
+    },
+    "font-weight": {
+      "regular": {
+        "value": "Regular",
+        "type": "text"
+      },
+      "semi-bold": {
+        "value": "Semi Bold",
+        "type": "text"
+      },
+      "medium": {
+        "value": "Medium",
+        "type": "text"
+      },
+      "bold": {
+        "value": "Bold",
+        "type": "text"
+      }
+    },
+    "font-size": {
+      "-": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "letter-spacing": {
+      "-": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "line-height": {
+      "-": {
+        "value": 0,
+        "type": "number"
+      }
+    }
+  },
+  "size": {
+    "spacing": {
+      "-": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "radius": {
+      "-": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "stroke": {
+      "-": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "blur": {
+      "-": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "icon": {
+      "-": {
+        "value": 0,
+        "type": "number"
+      }
+    },
+    "depth": {
+      "-": {
+        "value": 0,
+        "type": "number"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "id": "default",
+    "name": "Default",
+    "selectedTokenSets": {
+      "brand-default/Mode 1": "source",
+      "tokens-modes/default": "enabled"
+    }
+  },
+  {
+    "id": "natwest",
+    "name": "Natwest",
+    "selectedTokenSets": {
+      "tokens-modes/natwest": "enabled",
+      "brand-natwest/Mode 1": "source",
+      "brand-default/Mode 1": "source"
+    }
+  }
+]

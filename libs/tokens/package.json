@@ -1,0 +1,15 @@
+{
+  "name": "@rewards-ds/tokens",
+  "version": "0.0.1",
+  "private": true,
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/lodash.merge": "^4.6.9",
+    "lodash.merge": "^4.6.2"
+  }
+}
