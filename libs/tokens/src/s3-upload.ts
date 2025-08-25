@@ -43,7 +43,6 @@ export class S3Uploader {
         Body: fileContent,
         ContentType: options.contentType || 'text/css',
         CacheControl: options.cacheControl || 'public, max-age=31536000',
-        ACL: options.acl || 'public-read',
       });
 
       await this.s3Client.send(command);
