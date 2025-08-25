@@ -1,4 +1,5 @@
 import StyleDictionary from 'style-dictionary';
+import { S3Uploader, getPackageVersion, getS3ConfigFromEnv } from './s3-upload';
 
 type Theme = {
   id: string;
@@ -41,6 +42,34 @@ const promises = themes.map((theme) => {
   return sd.buildAllPlatforms();
 });
 
+function uploadConfigured(): Promise<void> {
+  // Check if S3 upload is configured
+  const s3Config = getS3ConfigFromEnv();
+  if (!s3Config.bucketName) {
+    console.log('⚠️   S3_BUCKET_NAME not configured, skipping upload');
+    return Promise.resolve();
+  }
+
+  console.log('📤  Starting S3 upload...');
+  const uploader = new S3Uploader(s3Config);
+  const version = getPackageVersion();
+  return uploader.uploadCSSFiles('./dist', version).then((uploadedUrls) => {
+    console.log('✅  S3 upload complete!');
+    console.log('📋  Uploaded files:');
+    uploadedUrls.forEach(url => console.log(`   ${url}`));
+  });
+}
+
 Promise
   .all(promises)
-  .then(() => console.log('✅  Done'));
+  .then(() => {
+    console.log('✅  Style Dictionary compilation complete');
+  })
+  .then(() => uploadConfigured())
+  .then(() => {
+    console.log('✅  Done');
+  })
+  .catch((error) => {
+    console.error('❌  Build/Upload failed:', error);
+    process.exit(1);
+  });

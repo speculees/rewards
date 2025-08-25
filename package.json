@@ -26,6 +26,7 @@
     "@angular/cli": "~20.1.0",
     "@angular/compiler-cli": "~20.1.0",
     "@angular/language-service": "~20.1.0",
+    "@aws-sdk/client-s3": "^3.658.0",
     "@eslint/js": "^9.8.0",
     "@nx/angular": "21.3.1",
     "@nx/cypress": "21.3.1",
