@@ -1,13 +1,23 @@
 .rui-button {
   // Base button styles
-  display: inline-flex;
-  align-items: center;
+  display: flex;
+  width: 361px;
+  padding: var(--size-spacing-400) var(--size-spacing-800);
   justify-content: center;
+  align-items: center;
   gap: var(--sds-size-space-200);
   border-radius: var(--size-radius-button-primary, 8px);
-  padding: var(--sds-size-space-400) var(--sds-size-space-800);
-
+  background: var(--colour-surface-action-default, #006ADB);
+  color: var(--colour-text-on-action-default, #FFF);
   text-align: center;
+
+  // font
+  font-family: var(--typography-body-base-font-family, Inter);
+  font-size: var(--typography-body-base-font-size, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: var(--typography-body-base-letter-spacing, 0);
 
   /* body/base */
   font-family: var(--typography-body-base-font-family, Inter);

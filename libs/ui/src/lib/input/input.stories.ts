@@ -3,7 +3,7 @@ import { action } from 'storybook/actions';
 import { InputComponent } from './input';
 
 const meta: Meta<unknown> = {
-  title: 'Product/Input',
+  title: 'Components/Input',
   component: InputComponent,
   args: {
     label: 'Button',

@@ -45,63 +45,9 @@ const meta: Meta<ButtonStoryArgs> = {
 export default meta;
 type Story = StoryObj<ButtonStoryArgs>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
     type: 'primary',
     label: 'Primary Button'
-  },
-};
-
-export const Secondary: Story = {
-  args: {
-    type: 'secondary',
-    label: 'Secondary Button'
-  },
-};
-
-export const White: Story = {
-  args: {
-    type: 'white',
-    label: 'White Button'
-  },
-};
-
-export const Tertiary: Story = {
-  args: {
-    type: 'tertiary',
-    label: 'Tertiary Button'
-  },
-};
-
-export const Pill: Story = {
-  args: {
-    type: 'pill',
-    label: 'Pill Button'
-  },
-};
-
-export const Icon: Story = {
-  args: {
-    type: 'icon',
-    label: '✕'
-  },
-  render: (args) => ({
-    props: {
-      type: args.type,
-      disabled: args.disabled
-    },
-    template: `
-      <button ruiButton type="icon" [disabled]="disabled" aria-label="Close">
-        ${args.label}
-      </button>
-    `,
-  }),
-};
-
-export const Disabled: Story = {
-  args: {
-    type: 'primary',
-    disabled: true,
-    label: 'Disabled Button'
   },
 };

@@ -8,5 +8,8 @@
     "@angular/common": "^20.1.0",
     "@angular/core": "^20.1.0"
   },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^9.1.1"
+  },
   "sideEffects": false
 }

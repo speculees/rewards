@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/angular';
 import { QrcodeComponent } from './qrcode';
 
 const meta: Meta<unknown> = {
-  title: 'Product/Qrcode',
+  title: 'Components/Qrcode',
   component: QrcodeComponent,
   args: {
     value: '123456789',
