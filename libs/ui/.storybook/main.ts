@@ -8,6 +8,7 @@ const config: StorybookConfig = {
   },
   addons: [
     '@storybook/addon-a11y',
+    '@storybook/addon-designs',
   ],
   staticDirs: [
     '../../tokens/dist'

@@ -9,7 +9,8 @@
     "@angular/core": "^20.1.0"
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^9.1.1"
+    "@storybook/addon-a11y": "^9.1.1",
+    "@storybook/addon-designs": "^10.0.2"
   },
   "sideEffects": false
 }

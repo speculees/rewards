@@ -50,4 +50,10 @@ export const Default: Story = {
     type: 'primary',
     label: 'Primary Button'
   },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/design/3gcrqy7MNDS7Zem1pxMWp5/Reward-Design-System-_DEVELOPMENT--Copy-?node-id=438-33424&t=85J6VXp1PvBaZCIt-0'
+    }
+  }
 };
