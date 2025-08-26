@@ -24,18 +24,10 @@ export default [...baseConfig, {
       'error',
       {
         type: 'attribute',
-        prefix: 'lib',
+        prefix: 'rui',
         style: 'camelCase',
       },
-    ],
-    '@angular-eslint/component-selector': [
-      'error',
-      {
-        type: 'element',
-        prefix: 'lib',
-        style: 'kebab-case',
-      },
-    ],
+    ]
   },
 }, {
   files: ['**/*.html'],
